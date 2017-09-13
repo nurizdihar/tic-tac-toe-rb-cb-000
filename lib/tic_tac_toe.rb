@@ -101,7 +101,7 @@ def draw?(board)
   end
 end
 
-def over?
+def over?(board)
   if won?(board)
     return true
   elsif draw?(board)
@@ -124,7 +124,7 @@ def winner(board)
 end
 
 def play(board)
-  until over?
+  until over?(board)
     turn(board)
   end
   if won?(board)
